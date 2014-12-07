@@ -12,14 +12,14 @@ SceneSettings:
     backfaceThreshold: 100
 --- !u!104 &2
 RenderSettings:
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: .5, g: .5, b: .5, a: 1}
-  m_FogMode: 3
-  m_FogDensity: .00999999978
+  m_FogMode: 2
+  m_FogDensity: .0500000007
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: fb3b9b55c01d2194c816b2d469854e16, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -870,9 +870,10 @@ GameObject:
   - 4: {fileID: 994646399}
   - 111: {fileID: 994646398}
   - 95: {fileID: 994646400}
+  - 82: {fileID: 994646401}
   m_Layer: 0
   m_Name: Sleigh
-  m_TagString: Untagged
+  m_TagString: sleigh
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -888,9 +889,9 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 0c3c6b46d94f44efba914aff641795a0, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: f54e1da798b72304182045af198902bb, type: 3}
+  - {fileID: 0}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!4 &994646399
@@ -916,7 +917,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 994646397}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6a25ea770148647e59dc53c356db86c9, type: 2}
   m_CullingMode: 0
@@ -924,45 +925,64 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!1 &1025753928
-GameObject:
+--- !u!82 &994646401
+AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1025753930}
-  - 114: {fileID: 1025753929}
-  m_Layer: 0
-  m_Name: TitleScreen
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1025753929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1025753928}
+  m_GameObject: {fileID: 994646397}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab9d5c9d5ea2e4a35bdc03d0cab357e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1025753930
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1025753928}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: ce92cdaad0efe4769a6b2a64e44ffcf4, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .731000006
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1325442310
 Prefab:
   m_ObjectHideFlags: 0
@@ -1021,6 +1041,18 @@ Prefab:
     - target: {fileID: 11100000, guid: e993a10b1f91285499c48cff49597c9b, type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: e993a10b1f91285499c48cff49597c9b, type: 2}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11100000, guid: e993a10b1f91285499c48cff49597c9b, type: 2}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: e993a10b1f91285499c48cff49597c9b, type: 2}
+      propertyPath: m_TagString
+      value: sleigh
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e993a10b1f91285499c48cff49597c9b, type: 2}
@@ -1525,7 +1557,7 @@ GameObject:
   - 4: {fileID: 1973780271}
   - 114: {fileID: 1973780270}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameControllerObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1542,7 +1574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0df0291d29b429aab653f6329c1c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sleigh: {fileID: 0}
+  sleigh: {fileID: 994646397}
+  customSkin: {fileID: 11400000, guid: 0cc7a9ace32914fa9b2a51219572ba4c, type: 2}
 --- !u!4 &1973780271
 Transform:
   m_ObjectHideFlags: 0
