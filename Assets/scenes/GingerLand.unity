@@ -14,10 +14,10 @@ SceneSettings:
 RenderSettings:
   m_Fog: 0
   m_FogColor: {r: .5, g: .5, b: .5, a: 1}
-  m_FogMode: 3
-  m_FogDensity: .00999999978
+  m_FogMode: 2
+  m_FogDensity: 0
   m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_LinearFogEnd: 3000
   m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: .5
@@ -1816,6 +1816,7 @@ GameObject:
   - 114: {fileID: 289527014}
   - 114: {fileID: 289527015}
   - 136: {fileID: 289527016}
+  - 114: {fileID: 289527017}
   m_Layer: 0
   m_Name: dev First Person Controller
   m_TagString: Player
@@ -2032,6 +2033,20 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &289527017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 289527008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3603e6aff337d40f6a355eea78835bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evilObject: {fileID: 1227868227}
+  effectDistance: 15
+  maxFogDensity: .200000003
 --- !u!1 &296973022
 GameObject:
   m_ObjectHideFlags: 0

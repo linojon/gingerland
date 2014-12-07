@@ -43,7 +43,7 @@ public class GameController : MonoBehaviour {
 
 		if (!isRunning) {
 			if (GUI.Button (new Rect(halfScreenW-halfButtonW, 200, buttonW, buttonH), "Start")) {
-				sleigh.animation.Play();
+				sleigh.animation.Play("SleighRideOutside");
 				isRunning = true;
 			}
 		}
