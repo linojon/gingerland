@@ -3,6 +3,9 @@ using System.Collections;
 
 public class ExitHole : MonoBehaviour {
 
+	private bool  isExiting			= false;
+
+
 	// Use this for initialization
 	void Start () {
 	
@@ -18,4 +21,17 @@ public class ExitHole : MonoBehaviour {
 //			Debug.Log ("Hit the Hole!");
 //		}
 //	}
+	void OnTriggerEnter(Collider other) {
+		if (!isExiting && other.CompareTag ("Player")) {
+			print ("Hit the Hole!");
+
+//			GameObject playerObj = other.gameObject;
+//			Rigidbody rigid = playerObj.AddComponent<Rigidbody>();
+//			rigid.useGravity = true;
+			isExiting = true;
+
+			// wait for player to fall or something, then
+			Application.LoadLevel("SleighLand");
+		}
+	}
 }
