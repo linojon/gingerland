@@ -19,16 +19,16 @@ public class GameController : MonoBehaviour {
 		halfScreenW = Screen.width/2;
 		halfButtonW = buttonW/2;
 
-		if (sleigh.animation.playAutomatically)
-			print ("Plays automatically");
-		else
-			print ("Should not play automatically");
-
-		//ShowStartPrompt();
-
-		// pg 444
-//		yield WaitForSeconds( 3); 
-//		Application.LoadLevel( 0); 
+//		if (sleigh.animation.playAutomatically) {
+//			print ("Plays automatically");
+//		} else {
+//			print ("Should not play automatically");
+//		}
+		if (sleigh.animation.enabled) {
+			print ("Animation enabled");
+		} else {
+			print ("Animation not enabled");
+		}
 	}
 	
 	// Update is called once per frame
@@ -42,7 +42,8 @@ public class GameController : MonoBehaviour {
 		MuteButton ();
 
 		if (!isRunning) {
-			if (GUI.Button (new Rect(halfScreenW-halfButtonW, 460, buttonW, buttonH), "Start")) {
+			if (GUI.Button (new Rect(halfScreenW-halfButtonW, 200, buttonW, buttonH), "Start")) {
+				sleigh.animation.Play();
 				isRunning = true;
 			}
 		}
@@ -56,10 +57,7 @@ public class GameController : MonoBehaviour {
 	
 	private void MuteButton () {
 		if (GUI.Button (new Rect(10, 10, 70, 50), "Mute")) {
-			if (sleigh.audio.mute)
-				sleigh.audio.mute = false;
-			else
-				sleigh.audio.mute = true;
+			sleigh.audio.mute = !sleigh.audio.mute;
 		}
 	}
 }
