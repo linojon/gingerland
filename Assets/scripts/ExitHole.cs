@@ -13,9 +13,9 @@ public class ExitHole : MonoBehaviour {
 	
 	}
 
-	void OnCollisionEnter(Collision col) {
-		if (col.gameObject.CompareTag ("Player")) {
-			Debug.Log ("Hit the Hole!");
-		}
-	}
+//	void OnCollisionEnter(Collision col) {
+//		if (col.gameObject.CompareTag ("Player")) {
+//			Debug.Log ("Hit the Hole!");
+//		}
+//	}
 }
