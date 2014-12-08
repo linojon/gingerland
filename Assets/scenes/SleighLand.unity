@@ -1948,6 +1948,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sleigh: {fileID: 994646397}
   customSkin: {fileID: 11400000, guid: 0cc7a9ace32914fa9b2a51219572ba4c, type: 2}
+  buttonW: 100
+  buttonH: 50
+  halfScreenW: 0
+  halfButtonW: 0
+  isRunning: 0
 --- !u!4 &1973780271
 Transform:
   m_ObjectHideFlags: 0
