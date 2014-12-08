@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class uiTestScript : MonoBehaviour {
+public class SleighlandGameController : MonoBehaviour {
 
 	public GameObject sleigh;
 
@@ -43,8 +43,8 @@ public class uiTestScript : MonoBehaviour {
 		Debug.Log ("clicked Start");
 		sleighAnim.enabled = true;
 		//startButton.renderer.enabled = false;  // doesnt work???
-		//Destroy(startButton);
-		startButton.gameObject.SetActive(false);
+		Destroy(startButton);
+		//startButton.gameObject.SetActive(false);
 		isPlaying = true;
 	}
 
