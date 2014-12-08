@@ -6,13 +6,16 @@ public class uiTestScript : MonoBehaviour {
 	public GameObject sleigh;
 
 	private Animator sleighAnim;
-	private GameObject playButton;
+	private GameObject startButton;
+	private bool isPlaying;
 
 // BUTTON CANT ACCESS THESE
 	// Use this for initialization
 	void Start () {
 
-		playButton = GameObject.FindGameObjectWithTag("startButton");
+		isPlaying = false;
+
+		startButton = GameObject.FindGameObjectWithTag("startButton");
 
 		if (sleigh == null) {
 			sleigh = gameObject;
@@ -25,22 +28,28 @@ public class uiTestScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (sleighAnim.GetCurrentAnimatorStateInfo(0).IsName("SleighRideOutside")) {
-			//do nothing
-		} else {
-			Debug.Log("Done");
+		if (isPlaying) {
+			if (sleighAnim.GetCurrentAnimatorStateInfo(0).IsName("SleighRideOutside")) {
+				//do nothing
+			} else {
+				Debug.Log("Done");
+				// show Enter button and wait
+				clickEnterGingerButton();
+			}
 		}
 	}
 
-	public void clickTest (string text) { // (bool) (int) float or string
-		Debug.Log (text);
+	public void clickStartButton () {
+		Debug.Log ("clicked Start");
 		sleighAnim.enabled = true;
-		Destroy(playButton);
-		//playButton.renderer.enabled = false;  // doesnt work???
+		//startButton.renderer.enabled = false;  // doesnt work???
+		//Destroy(startButton);
+		startButton.gameObject.SetActive(false);
+		isPlaying = true;
 	}
 
-	public void clickTest2 () {
-		Debug.Log ("clicked 2");
-		sleighAnim.enabled = true;
+	public void clickEnterGingerButton () {
+		Debug.Log ("clicked Enter");
+		Application.LoadLevel("GingerLand");
 	}
 }
