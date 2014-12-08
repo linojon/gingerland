@@ -34,12 +34,12 @@ public class SleighlandGameController : MonoBehaviour {
 			} else {
 				Debug.Log("Done");
 				// show Enter button and wait
-				clickEnterGingerButton();
+				ClickEnterGingerButton();
 			}
 		}
 	}
 
-	public void clickStartButton () {
+	public void ClickStartButton () {
 		Debug.Log ("clicked Start");
 		sleighAnim.enabled = true;
 		//startButton.renderer.enabled = false;  // doesnt work???
@@ -48,8 +48,14 @@ public class SleighlandGameController : MonoBehaviour {
 		isPlaying = true;
 	}
 
-	public void clickEnterGingerButton () {
+	public void ClickEnterGingerButton () {
 		Debug.Log ("clicked Enter");
 		Application.LoadLevel("GingerLand");
 	}
+
+//	private void ClickMuteButton () {
+//		sleigh.audio.mute = !sleigh.audio.mute;
+//		//toggle text "Mute" vs "Un-Mute"
+//	}
+
 }

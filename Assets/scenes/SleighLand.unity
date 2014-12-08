@@ -1227,10 +1227,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 994646397}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27dcb928b95fb47cfad43df84648c118, type: 3}
+  m_Script: {fileID: 11500000, guid: aa63622725cf2474bb749cabb8c32dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sleigh: {fileID: 0}
+  sleigh: {fileID: 994646397}
 --- !u!1 &1269525087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,7 +1244,7 @@ GameObject:
   - 114: {fileID: 1269525089}
   m_Layer: 5
   m_Name: Button
-  m_TagString: Untagged
+  m_TagString: startButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1288,12 +1288,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 27dcb928b95fb47cfad43df84648c118, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 994646402}
+        m_MethodName: ClickStartButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
