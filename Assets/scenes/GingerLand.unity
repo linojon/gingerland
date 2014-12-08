@@ -2846,6 +2846,7 @@ GameObject:
   - 114: {fileID: 540237658}
   - 114: {fileID: 540237657}
   - 114: {fileID: 540237656}
+  - 114: {fileID: 540237661}
   m_Layer: 0
   m_Name: main First Person Controller
   m_TagString: Player
@@ -3038,6 +3039,20 @@ CharacterController:
   m_SkinWidth: .0500000007
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &540237661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 540237654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3603e6aff337d40f6a355eea78835bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evilObject: {fileID: 1227868227}
+  effectDistance: 15
+  maxFogDensity: .200000003
 --- !u!1 &563795015
 GameObject:
   m_ObjectHideFlags: 0
@@ -10229,6 +10244,7 @@ GameObject:
   - 114: {fileID: 1359440078}
   - 114: {fileID: 1359440077}
   - 114: {fileID: 1359440076}
+  - 114: {fileID: 1359440080}
   m_Layer: 0
   m_Name: OVRPlayerController
   m_TagString: Player
@@ -10324,6 +10340,20 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1359440080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1359440074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3603e6aff337d40f6a355eea78835bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evilObject: {fileID: 1227868227}
+  effectDistance: 15
+  maxFogDensity: .200000003
 --- !u!1 &1372584720
 GameObject:
   m_ObjectHideFlags: 0
