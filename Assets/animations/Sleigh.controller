@@ -32,7 +32,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: SleighRideOutside
-  m_Speed: 10
+  m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 0c3c6b46d94f44efba914aff641795a0, type: 2}
