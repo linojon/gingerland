@@ -32,8 +32,12 @@ public class ExitHole : MonoBehaviour {
 		isExiting = true;
 
 		// disable player scripts
-		player.GetComponent<CharacterMotor>().enabled = false;
-		player.GetComponent<FPSInputController>().enabled = false;
+		if (player.GetComponent<CharacterMotor>())
+			player.GetComponent<CharacterMotor>().enabled = false;
+		if (player.GetComponent<FPSInputController>())
+			player.GetComponent<FPSInputController>().enabled = false;
+		if (player.GetComponent<OVRPlayerController>())
+			player.GetComponent<OVRPlayerController>().enabled = false;
 
 		Rigidbody body = player.AddComponent<Rigidbody>(); // Add the rigidbody.
 //		yield return new WaitForSeconds(1);
