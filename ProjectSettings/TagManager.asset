@@ -6,6 +6,8 @@ TagManager:
   - blackhole
   - sleigh
   - startButton
+  - enterButton
+  - building
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

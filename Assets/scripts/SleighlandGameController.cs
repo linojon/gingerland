@@ -7,15 +7,23 @@ public class SleighlandGameController : MonoBehaviour {
 
 	private Animator sleighAnim;
 	private GameObject startButton;
-	private bool isPlaying;
+	private GameObject enterButton;
+	private GameObject building;
+	private float distance;
+
+//	private bool isPlaying;
 
 // BUTTON CANT ACCESS THESE
 	// Use this for initialization
 	void Start () {
 
-		isPlaying = false;
+//		isPlaying = false;
 
 		startButton = GameObject.FindGameObjectWithTag("startButton");
+		enterButton = GameObject.FindGameObjectWithTag("enterButton");
+		building    = GameObject.FindGameObjectWithTag("building");
+
+		enterButton.SetActive(false);
 
 		if (sleigh == null) {
 			sleigh = gameObject;
@@ -28,24 +36,30 @@ public class SleighlandGameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (isPlaying) {
-			if (sleighAnim.GetCurrentAnimatorStateInfo(0).IsName("SleighRideOutside")) {
-				//do nothing
-			} else {
-				Debug.Log("Done");
-				// show Enter button and wait
-				ClickEnterGingerButton();
-			}
+//		if (isPlaying) {
+//			if (sleighAnim.GetCurrentAnimatorStateInfo(0).IsName("SleighRideOutside")) {
+//				//do nothing
+//			} else {
+//				Debug.Log("Done");
+//				// show Enter button and wait
+//				//ClickEnterGingerButton();
+//			}
+//		}
+		distance = Vector3.Distance(building.transform.position, gameObject.transform.position);
+		if (distance <= 5) {
+			enterButton.SetActive (true);
 		}
+		Debug.Log (distance);
 	}
 
 	public void ClickStartButton () {
 		Debug.Log ("clicked Start");
 		sleighAnim.enabled = true;
 		//startButton.renderer.enabled = false;  // doesnt work???
-		Destroy(startButton);
+		//Destroy(startButton);
+		startButton.SetActive(false);
 		//startButton.gameObject.SetActive(false);
-		isPlaying = true;
+//		isPlaying = true;
 	}
 
 	public void ClickEnterGingerButton () {
