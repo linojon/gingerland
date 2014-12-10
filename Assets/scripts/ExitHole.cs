@@ -42,7 +42,7 @@ public class ExitHole : MonoBehaviour {
 		Rigidbody body = player.AddComponent<Rigidbody>(); // Add the rigidbody.
 //		yield return new WaitForSeconds(1);
 
-		audio.PlayDelayed(3);
+		audio.PlayDelayed(1);
 
 //		yield return new WaitForSeconds(10);
 
