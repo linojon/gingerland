@@ -1816,14 +1816,13 @@ GameObject:
   - 114: {fileID: 289527014}
   - 114: {fileID: 289527015}
   - 136: {fileID: 289527016}
-  - 114: {fileID: 289527017}
   m_Layer: 0
   m_Name: dev First Person Controller
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &289527009
 Transform:
   m_ObjectHideFlags: 0
@@ -2015,7 +2014,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 289527008}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c34ada61220b4c7eabb07e8368becde, type: 3}
   m_Name: 
@@ -2033,20 +2032,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &289527017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 289527008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3603e6aff337d40f6a355eea78835bbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  evilObject: {fileID: 1227868227}
-  effectDistance: 15
-  maxFogDensity: .200000003
 --- !u!1 &296973022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2276,7 +2261,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_TagString
@@ -2977,14 +2962,13 @@ GameObject:
   - 114: {fileID: 540237658}
   - 114: {fileID: 540237657}
   - 114: {fileID: 540237656}
-  - 114: {fileID: 540237661}
   m_Layer: 0
   m_Name: main First Person Controller
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &540237655
 Transform:
   m_ObjectHideFlags: 0
@@ -3151,20 +3135,6 @@ CharacterController:
   m_SkinWidth: .0500000007
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &540237661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 540237654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3603e6aff337d40f6a355eea78835bbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  evilObject: {fileID: 1227868227}
-  effectDistance: 15
-  maxFogDensity: .200000003
 --- !u!1 &563795015
 GameObject:
   m_ObjectHideFlags: 0
@@ -4103,7 +4073,7 @@ GameObject:
   - 199: {fileID: 761213149}
   m_Layer: 0
   m_Name: Ghostly aneurisms
-  m_TagString: Untagged
+  m_TagString: ghosts
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4152,7 +4122,7 @@ ParticleSystem:
   randomSeed: 0
   looping: 1
   prewarm: 1
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 1
   InitialModule:
     enabled: 1
@@ -5781,7 +5751,7 @@ GameObject:
   - 114: {fileID: 840636341}
   - 154: {fileID: 840636340}
   m_Layer: 0
-  m_Name: Terrain
+  m_Name: GingerLandTerrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6449,7 +6419,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 954382626}
   m_Layer: 0
-  m_Name: Snowflake gears
+  m_Name: Graveyard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6473,6 +6443,7 @@ Transform:
   - {fileID: 761213151}
   - {fileID: 1865423074}
   - {fileID: 2085694239}
+  - {fileID: 1610125240}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!1 &959993952
@@ -10135,6 +10106,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1227868228}
   - 95: {fileID: 1227868229}
+  - 114: {fileID: 1227868230}
   m_Layer: 0
   m_Name: bloodflow
   m_TagString: Untagged
@@ -10173,6 +10145,19 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1227868230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1227868227}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3603e6aff337d40f6a355eea78835bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectDistance: 15
+  maxFogDensity: .200000003
 --- !u!1 &1232530400
 GameObject:
   m_ObjectHideFlags: 0
@@ -10465,8 +10450,6 @@ GameObject:
   - 114: {fileID: 1359440078}
   - 114: {fileID: 1359440077}
   - 114: {fileID: 1359440076}
-  - 114: {fileID: 1359440080}
-  - 54: {fileID: 1359440081}
   m_Layer: 0
   m_Name: OVRPlayerController
   m_TagString: Player
@@ -10562,35 +10545,6 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1359440080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1359440074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3603e6aff337d40f6a355eea78835bbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  evilObject: {fileID: 1227868227}
-  effectDistance: 15
-  maxFogDensity: .200000003
---- !u!54 &1359440081
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1359440074}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1360544363
 GameObject:
   m_ObjectHideFlags: 0
@@ -11147,7 +11101,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_TagString
@@ -11961,6 +11915,61 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 2643352bb30ad4d4b8e824715b0f0746, type: 2}
+--- !u!1 &1610125239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1610125240}
+  - 114: {fileID: 1610125241}
+  - 114: {fileID: 1610125242}
+  m_Layer: 0
+  m_Name: GraveyardController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1610125240
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1610125239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.3999996, y: 0, z: 7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 954382626}
+  m_RootOrder: 8
+--- !u!114 &1610125241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1610125239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3603e6aff337d40f6a355eea78835bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectDistance: 15
+  maxFogDensity: .200000003
+--- !u!114 &1610125242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1610125239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d085128ae1743b592d9ba410b99e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  centerObject: {fileID: 761213148}
+  maxDistance: 15
 --- !u!1 &1647839688
 GameObject:
   m_ObjectHideFlags: 0
