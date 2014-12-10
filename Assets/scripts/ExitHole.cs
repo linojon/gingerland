@@ -41,8 +41,9 @@ public class ExitHole : MonoBehaviour {
 
 		Rigidbody body = player.AddComponent<Rigidbody>(); // Add the rigidbody.
 //		yield return new WaitForSeconds(1);
-		// this sound clip is 16hz delay n seconds
-		audio.Play(16000 * 3);
+
+		audio.PlayDelayed(3);
+
 //		yield return new WaitForSeconds(10);
 
 		// wait for player to fall or something, then
