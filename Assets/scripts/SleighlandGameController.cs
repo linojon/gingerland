@@ -7,7 +7,7 @@ public class SleighlandGameController : MonoBehaviour {
 
 	private Animator sleighAnim;
 	private GameObject startButton;
-	private GameObject enterButton;
+//	private GameObject enterButton;
 	private GameObject building;
 	private float distance;
 
@@ -20,10 +20,10 @@ public class SleighlandGameController : MonoBehaviour {
 //		isPlaying = false;
 
 		startButton = GameObject.FindGameObjectWithTag("startButton");
-		enterButton = GameObject.FindGameObjectWithTag("enterButton");
+//		enterButton = GameObject.FindGameObjectWithTag("enterButton");
 		building    = GameObject.FindGameObjectWithTag("building");
 
-		enterButton.SetActive(false);
+//		enterButton.SetActive(false);
 
 		if (sleigh == null) {
 			sleigh = gameObject;
@@ -47,7 +47,7 @@ public class SleighlandGameController : MonoBehaviour {
 //		}
 		distance = Vector3.Distance(building.transform.position, gameObject.transform.position);
 		if (distance <= 5) {
-			enterButton.SetActive (true);
+//			enterButton.SetActive (true);
 		}
 		Debug.Log (distance);
 	}
