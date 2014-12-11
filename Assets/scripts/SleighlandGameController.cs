@@ -73,4 +73,16 @@ public class SleighlandGameController : MonoBehaviour {
 //		//toggle text "Mute" vs "Un-Mute"
 //	}
 
+//	/*
+//	 * toggleOVR(bool ovr)
+//	 * 	if ovr
+//	 * 		disable Sleigh.Camera
+//	 * 		enable Sleigh.OVRPalyerController
+//	 * 		disable OverlayCanvas
+//	 * 		enable World Canvas ?
+//	 * 		in GingerLand scene, disable 
+//	 * 			disable "main First Person Controller"
+//	 * 			enable OVRPlayerController
+//	 * /
+
 }
