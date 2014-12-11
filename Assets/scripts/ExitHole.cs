@@ -39,7 +39,8 @@ public class ExitHole : MonoBehaviour {
 		if (player.GetComponent<OVRPlayerController>())
 			player.GetComponent<OVRPlayerController>().enabled = false;
 
-		Rigidbody body = player.AddComponent<Rigidbody>(); // Add the rigidbody.
+		//Rigidbody body = 
+			player.AddComponent<Rigidbody>(); // Add the rigidbody.
 //		yield return new WaitForSeconds(1);
 
 		audio.PlayDelayed(1);
@@ -47,7 +48,7 @@ public class ExitHole : MonoBehaviour {
 //		yield return new WaitForSeconds(10);
 
 		// wait for player to fall or something, then
-		//Application.LoadLevel("SleighLand");
+		Application.LoadLevel("SleighLand");
 	}
 
 }
