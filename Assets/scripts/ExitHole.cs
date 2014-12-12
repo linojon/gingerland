@@ -35,6 +35,13 @@ public class ExitHole : MonoBehaviour {
 	private void ExitGingerLand() {
 		isExiting = true;
 
+		GivePlayerGravity();
+		audio.PlayDelayed(1);
+		StartCoroutine( WaitShowCredits(4f) );
+		StartCoroutine( WaitLoadLevel(10f) );
+	}
+
+	private void GivePlayerGravity() {
 		// disable player scripts
 		if (player.GetComponent<CharacterMotor>())
 			player.GetComponent<CharacterMotor>().enabled = false;
@@ -42,16 +49,8 @@ public class ExitHole : MonoBehaviour {
 			player.GetComponent<FPSInputController>().enabled = false;
 		if (player.GetComponent<OVRPlayerController>())
 			player.GetComponent<OVRPlayerController>().enabled = false;
-
-
+			
 		player.AddComponent<Rigidbody>(); // Add the rigidbody.
-//		yield return new WaitForSeconds(1);
-
-		audio.PlayDelayed(1);
-
-		StartCoroutine( WaitShowCredits(4f) );
-		StartCoroutine( WaitLoadLevel(10f) );
-
 	}
 
 	IEnumerator WaitShowCredits(float time) {
