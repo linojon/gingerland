@@ -7,12 +7,16 @@ public class ExitHole : MonoBehaviour {
 	private float distance;
 	private GameObject[] exitHoles;
 	private GameObject player;
+	private GameObject creditsCanvas;
 
 
 	// Use this for initialization
 	void Start () {
 		exitHoles = GameObject.FindGameObjectsWithTag("exitHole");
 		player = GameObject.FindGameObjectWithTag("Player");
+		creditsCanvas = GameObject.FindGameObjectWithTag("creditsCanvas");
+
+		creditsCanvas.SetActive (false );
 	}
 	
 	// Update is called once per frame
@@ -39,16 +43,25 @@ public class ExitHole : MonoBehaviour {
 		if (player.GetComponent<OVRPlayerController>())
 			player.GetComponent<OVRPlayerController>().enabled = false;
 
-		//Rigidbody body = 
-			player.AddComponent<Rigidbody>(); // Add the rigidbody.
+
+		player.AddComponent<Rigidbody>(); // Add the rigidbody.
 //		yield return new WaitForSeconds(1);
 
 		audio.PlayDelayed(1);
 
-//		yield return new WaitForSeconds(10);
+		StartCoroutine( WaitShowCredits(4f) );
+		StartCoroutine( WaitLoadLevel(10f) );
 
-		// wait for player to fall or something, then
-		Application.LoadLevel("SleighLand");
+	}
+
+	IEnumerator WaitShowCredits(float time) {
+		yield return new WaitForSeconds(time);
+		creditsCanvas.SetActive( true );
+	}
+
+	IEnumerator WaitLoadLevel(float time) {
+		yield return new WaitForSeconds(time);
+		Application.LoadLevel ("SleighLand");
 	}
 
 }
