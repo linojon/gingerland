@@ -16,7 +16,8 @@ public class ExitHole : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag("Player");
 		creditsCanvas = GameObject.FindGameObjectWithTag("creditsCanvas");
 
-		creditsCanvas.SetActive (false );
+		if (creditsCanvas)
+			creditsCanvas.SetActive (false );
 	}
 	
 	// Update is called once per frame
