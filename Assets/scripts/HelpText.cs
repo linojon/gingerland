@@ -13,7 +13,7 @@ public class HelpText : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.anyKey) {
-			Debug.Log ("key pressed!!");
+//			Debug.Log ("key pressed!!");
 			text.SetActive(false);
 		}
 	}

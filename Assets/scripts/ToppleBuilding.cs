@@ -15,13 +15,9 @@ public class ToppleBuilding : MonoBehaviour {
 	void Start () {
 		StartCoroutine( WaitRotate(0f, -4f) );
 		StartCoroutine( WaitRotate(2f, -4f) );
-		StartCoroutine( WaitRotate(4f, -10f) );
-		StartCoroutine( WaitToGo (7f) );
-		terrain.SetActive(true);
-		snowing.SetActive(true);
-		start1.SetActive(true);
-		start2.SetActive(true);
-		start3.SetActive(true);
+		StartCoroutine( WaitRotate(4f, -12f) );
+		StartCoroutine( WaitToGo (9f) );
+		StartCoroutine( LoadTheStuff() );
 	}
 	
 	IEnumerator WaitRotate(float time, float angle) {
@@ -31,5 +27,13 @@ public class ToppleBuilding : MonoBehaviour {
 	IEnumerator WaitToGo(float time) {
 		yield return new WaitForSeconds(time);
 		buildingArea.SetActive(false);
+	}
+	IEnumerator LoadTheStuff() {
+		yield return new WaitForSeconds(0f);
+		terrain.SetActive(true);
+		snowing.SetActive(true);
+		start1.SetActive(true);
+		start2.SetActive(true);
+		start3.SetActive(true);
 	}
 }
