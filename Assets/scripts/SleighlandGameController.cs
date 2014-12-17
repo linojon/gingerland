@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SleighlandGameController : MonoBehaviour {
 
+	public bool isOVR;
 	public GameObject sleigh;
 
 	private Animator sleighAnim;
@@ -11,6 +12,7 @@ public class SleighlandGameController : MonoBehaviour {
 	private GameObject quitButton;
 	private GameObject building;
 	private float distance;
+	private float closestDist;
 
 //	private bool isPlaying;
 
@@ -34,14 +36,21 @@ public class SleighlandGameController : MonoBehaviour {
 		sleighAnim = sleigh.GetComponent<Animator>();
 		sleighAnim.enabled = false;
 
+		if (isOVR)
+			closestDist = 1.04f;
+		else
+			closestDist = 1.5f;
+
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-//		if (Input.anyKey) {
-//			ClickStartButton();
-//		} 
+		if (Input.GetKeyDown (KeyCode.Q))
+			ClickQuitButton();
+		else if (Input.anyKey)
+			ClickStartButton();
+
 //		else {
 
 			distance = Vector3.Distance(building.transform.position, gameObject.transform.position);
@@ -49,7 +58,7 @@ public class SleighlandGameController : MonoBehaviour {
 //			if (distance <= 4.1 && enterButton != null) {
 //				enterButton.SetActive (true);
 //			}
-			if (distance <= 1.5)
+			if (distance <= closestDist)
 				ClickEnterGingerButton();
 //		}
 	}

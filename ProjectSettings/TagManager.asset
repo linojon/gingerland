@@ -19,6 +19,7 @@ TagManager:
   - start3
   - buildingArea
   - endLocation
+  - creditsCanvasWorld
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

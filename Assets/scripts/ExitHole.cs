@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ExitHole : MonoBehaviour {
 
+	public bool isOVR;
 	private bool  isExiting			= false;
 	private float distance;
 	private GameObject[] exitHoles;
@@ -14,7 +15,11 @@ public class ExitHole : MonoBehaviour {
 	void Start () {
 		exitHoles = GameObject.FindGameObjectsWithTag("exitHole");
 		player = GameObject.FindWithTag("Player");
-		creditsCanvas = GameObject.FindWithTag("creditsCanvas");
+		if (isOVR)
+			creditsCanvas = GameObject.FindWithTag("creditsCanvasWorld");
+		else
+			creditsCanvas = GameObject.FindWithTag("creditsCanvas");
+
 
 		if (creditsCanvas)
 			creditsCanvas.SetActive (false );
