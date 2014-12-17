@@ -13005,45 +13005,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 0}
---- !u!1 &1548217436
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1548217438}
-  - 114: {fileID: 1548217437}
-  m_Layer: 0
-  m_Name: SceneController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1548217437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1548217436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fa2bcb527b914cea8002dfb33b89437, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1548217438
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1548217436}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1276.59229, y: 2.59401226, z: 735.67804}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
 --- !u!1 &1560185852
 GameObject:
   m_ObjectHideFlags: 0
@@ -15504,9 +15465,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1.29999995
-  m_Text: 'Use mouse to look around
+  m_Text: 'Press arrow keys to walk
 
-    Press arrow keys to walk
+    Use mouse to turn direction
 
 '
 --- !u!222 &1947316127
@@ -16388,6 +16349,7 @@ GameObject:
   - 223: {fileID: 2117045305}
   - 114: {fileID: 2117045304}
   - 114: {fileID: 2117045303}
+  - 114: {fileID: 2117045307}
   m_Layer: 5
   m_Name: helpText
   m_TagString: helpText
@@ -16468,6 +16430,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2117045307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2117045302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa2bcb527b914cea8002dfb33b89437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2125114280
 GameObject:
   m_ObjectHideFlags: 0
