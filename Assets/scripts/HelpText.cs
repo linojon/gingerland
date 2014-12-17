@@ -14,7 +14,8 @@ public class HelpText : MonoBehaviour {
 	void Update () {
 		if (Input.anyKey) {
 //			Debug.Log ("key pressed!!");
-			text.SetActive(false);
+			if (text)
+				text.SetActive(false);
 		}
 	}
 }
