@@ -23,7 +23,7 @@ public class SleighlandGameController : MonoBehaviour {
 		startButton = GameObject.FindGameObjectWithTag("startButton");
 		enterButton = GameObject.FindGameObjectWithTag("enterButton");
 		quitButton  = GameObject.FindGameObjectWithTag("quitButton");
-		building    = GameObject.FindGameObjectWithTag("building");
+		building    = GameObject.FindGameObjectWithTag("endLocation");
 
 		if (enterButton != null)
 			enterButton.SetActive(false);
@@ -39,17 +39,19 @@ public class SleighlandGameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.anyKey) {
-			ClickStartButton();
-		} 
-		else {
+//		if (Input.anyKey) {
+//			ClickStartButton();
+//		} 
+//		else {
 
 			distance = Vector3.Distance(building.transform.position, gameObject.transform.position);
-			//Debug.Log (distance);
-			if (distance <= 5 && enterButton != null) {
-				enterButton.SetActive (true);
-			}
-		}
+			Debug.Log (distance);
+//			if (distance <= 4.1 && enterButton != null) {
+//				enterButton.SetActive (true);
+//			}
+			if (distance <= 1.5)
+				ClickEnterGingerButton();
+//		}
 	}
 
 	public void ClickStartButton () {
@@ -69,6 +71,7 @@ public class SleighlandGameController : MonoBehaviour {
 	}
 
 	public void ClickQuitButton () {
+		Debug.Log("Quit pressed");
 		Application.Quit ();
 	}
 

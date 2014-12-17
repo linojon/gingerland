@@ -13,12 +13,12 @@ public class ToppleBuilding : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		snowing.SetActive(true);
 		StartCoroutine( WaitRotate(0f, -4f) );
-		StartCoroutine( WaitRotate(3f, -4f) );
-		StartCoroutine( WaitRotate(6f, -10f) );
-		StartCoroutine( WaitToGo (8f) );
+		StartCoroutine( WaitRotate(2f, -4f) );
+		StartCoroutine( WaitRotate(4f, -10f) );
+		StartCoroutine( WaitToGo (7f) );
 		terrain.SetActive(true);
+		snowing.SetActive(true);
 		start1.SetActive(true);
 		start2.SetActive(true);
 		start3.SetActive(true);
