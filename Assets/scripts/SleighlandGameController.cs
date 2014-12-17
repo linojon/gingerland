@@ -39,20 +39,17 @@ public class SleighlandGameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-//		if (isPlaying) {
-//			if (sleighAnim.GetCurrentAnimatorStateInfo(0).IsName("SleighRideOutside")) {
-//				//do nothing
-//			} else {
-//				Debug.Log("Done");
-//				// show Enter button and wait
-//				//ClickEnterGingerButton();
-//			}
-//		}
-		distance = Vector3.Distance(building.transform.position, gameObject.transform.position);
-		if (distance <= 5 && enterButton != null) {
-			enterButton.SetActive (true);
+		if (Input.anyKey) {
+			ClickStartButton();
+		} 
+		else {
+
+			distance = Vector3.Distance(building.transform.position, gameObject.transform.position);
+			//Debug.Log (distance);
+			if (distance <= 5 && enterButton != null) {
+				enterButton.SetActive (true);
+			}
 		}
-		Debug.Log (distance);
 	}
 
 	public void ClickStartButton () {
