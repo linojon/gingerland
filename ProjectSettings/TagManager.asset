@@ -12,6 +12,12 @@ TagManager:
   - ghosts
   - creditsCanvas
   - quitButton
+  - terrain
+  - snowing
+  - start1
+  - start2
+  - start3
+  - buildingArea
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
