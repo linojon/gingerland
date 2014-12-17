@@ -13,8 +13,8 @@ public class ExitHole : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		exitHoles = GameObject.FindGameObjectsWithTag("exitHole");
-		player = GameObject.FindGameObjectWithTag("Player");
-		creditsCanvas = GameObject.FindGameObjectWithTag("creditsCanvas");
+		player = GameObject.FindWithTag("Player");
+		creditsCanvas = GameObject.FindWithTag("creditsCanvas");
 
 		if (creditsCanvas)
 			creditsCanvas.SetActive (false );
@@ -55,7 +55,10 @@ public class ExitHole : MonoBehaviour {
 	}
 
 	IEnumerator WaitShowCredits(float time) {
+
 		yield return new WaitForSeconds(time);
+		if (!creditsCanvas)	
+			creditsCanvas = GameObject.FindWithTag("creditsCanvas");
 		creditsCanvas.SetActive( true );
 	}
 

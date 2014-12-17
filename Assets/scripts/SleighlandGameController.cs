@@ -8,6 +8,7 @@ public class SleighlandGameController : MonoBehaviour {
 	private Animator sleighAnim;
 	private GameObject startButton;
 	private GameObject enterButton;
+	private GameObject quitButton;
 	private GameObject building;
 	private float distance;
 
@@ -21,6 +22,7 @@ public class SleighlandGameController : MonoBehaviour {
 
 		startButton = GameObject.FindGameObjectWithTag("startButton");
 		enterButton = GameObject.FindGameObjectWithTag("enterButton");
+		quitButton  = GameObject.FindGameObjectWithTag("quitButton");
 		building    = GameObject.FindGameObjectWithTag("building");
 
 		if (enterButton != null)
@@ -54,18 +56,23 @@ public class SleighlandGameController : MonoBehaviour {
 	}
 
 	public void ClickStartButton () {
-		Debug.Log ("clicked Start");
+		//Debug.Log ("clicked Start");
 		sleighAnim.enabled = true;
 		//startButton.renderer.enabled = false;  // doesnt work???
 		//Destroy(startButton);
 		startButton.SetActive(false);
+		quitButton.SetActive(false);
 		//startButton.gameObject.SetActive(false);
 //		isPlaying = true;
 	}
 
 	public void ClickEnterGingerButton () {
-		Debug.Log ("clicked Enter");
+		//Debug.Log ("clicked Enter");
 		Application.LoadLevel("GingerLand");
+	}
+
+	public void ClickQuitButton () {
+		Application.Quit ();
 	}
 
 //	private void ClickMuteButton () {
